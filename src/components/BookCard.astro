@@ -1,0 +1,24 @@
+---
+// src/components/BookCard.astro
+const { title, description, price, link, image } = Astro.props;
+---
+<div class="book-card">
+  <img src={image} alt={title} />
+  <div class="book-info">
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <div class="book-price">{price}</div>
+    <a href={link} class="buy-button" target="_blank">Buy Now</a>
+  </div>
+</div>
+
+<style>
+  /* Book card styles */
+  .book-card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  /* other book card styles */
+</style>
